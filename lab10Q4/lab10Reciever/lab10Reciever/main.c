@@ -21,7 +21,7 @@ while(1)
 	while(!(UCSR0A&(1<<RXC0)));
 	receiveData=UDR0;
 	PORTC=receiveData;
-	if(receiveData==0b11110000)
+	if(receiveData==0b00110011)
 	{
 		PORTA^=(1<<PA0);
 		_delay_ms(1000);

@@ -19,7 +19,7 @@ int main(void)
 		if(y==0)
 		{
 			while(!(UCSR0A&(1<<UDRE0)));
-			UDR0=0b11110000;
+			UDR0=0b00110011;
 			_delay_ms(1000);
 		}
 	}

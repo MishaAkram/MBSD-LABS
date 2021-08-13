@@ -21,11 +21,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   8 .debug_frame  00000024  00000000  00000000  00001198  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    0000038d  00000000  00000000  000011bc  2**0
+  9 .debug_str    0000038f  00000000  00000000  000011bc  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    0000002b  00000000  00000000  00001549  2**0
+ 10 .debug_loc    0000002b  00000000  00000000  0000154b  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000010  00000000  00000000  00001574  2**0
+ 11 .debug_ranges 00000010  00000000  00000000  00001576  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -118,8 +118,8 @@ while(1)
   ae:	8c b1       	in	r24, 0x0c	; 12
 	PORTC=receiveData;
   b0:	85 bb       	out	0x15, r24	; 21
-	if(receiveData==0b11110000)
-  b2:	80 3f       	cpi	r24, 0xF0	; 240
+	if(receiveData==0b00110011)
+  b2:	83 33       	cpi	r24, 0x33	; 51
   b4:	c9 f7       	brne	.-14     	; 0xa8 <main+0x20>
 	{
 		PORTA^=(1<<PA0);
